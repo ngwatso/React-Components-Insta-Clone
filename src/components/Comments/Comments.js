@@ -5,11 +5,12 @@ import './Comments.css';
 const Comments = props => {
   // 🔥 Make sure the parent of Comments is passing the right props!
   const { comments } = props;
-
+  
   return (
     <div>
-      {comments.forEach((comment) => {
-        return comment.text
+      {comments.map((comment) => {
+        return <Comment key={comment.id} comment={comment}/>
+        // return <li><Comment key={comment.id} user={comment.username} text={comment.text} /></li>
       })}
     </div>
   );
