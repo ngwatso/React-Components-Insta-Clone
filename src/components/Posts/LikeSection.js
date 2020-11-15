@@ -2,17 +2,21 @@
 // Use a piece of data coming in through props to display the correct number of likes.
 // You will also add an onClick handler that utilizes `likePost` to increase the count of likes.
 // (As a stretch goal, you might want to prevent your user from "liking" the same post more than once.)
-import React from 'react';
+import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const LikeSection = props => {
   // 🔥 Make sure the parent of LikeSection is passing the right props!
   const { likePost, numberOfLikes } = props;
+  // set default state to current numberOfLikes
+  const [newLike, setNewLike] = useState(numberOfLikes);
 
 
   const increaseLikes = () => {
-    return likePost ? console.log('click') : null;
+    
+    return likePost ? setNewLike(newLike + 1) : null;
+    // return likePost;
   }
   // let increaseNumberOfLikes = numberOfLikes;
   // const increaseLikes = () => {
@@ -21,7 +25,7 @@ const LikeSection = props => {
   // console.log("going up", increaseNumberOfLikes)
   // console.log(likePost)
   // console.log(numberOfLikes)
-  // console.log(increaseLikes())
+  console.log("likeSection", newLike, numberOfLikes)
 
   return (
     <div>
@@ -36,7 +40,7 @@ const LikeSection = props => {
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className='like-number'>{numberOfLikes}</p>
+      <p className='like-number'>{newLike}</p>
     </div>
   );
 };

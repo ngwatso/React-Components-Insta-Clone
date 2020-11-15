@@ -30,12 +30,14 @@ const App = () => {
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
-    const arr = posts;
-    setPosts(posts.map((post) => {
-      return post.id === postId ? console.log("idFound") : {...arr};
+    // const arr = posts;
+    // console.log("arr", arr);
+    setPosts(posts.map((id) => {
+      console.log("id", id, "postID", id.postId)
+      return id === postId ? console.log("idFound") : {...posts};
     }))
   };  
-
+  console.log("app.js", posts)
   return (
     <div className='App'>
       <SearchBar /> 

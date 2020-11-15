@@ -5,7 +5,7 @@ import './Posts.css';
 const Posts = (props) => {
   // 🔥 Make sure the parent of Posts is passing the right props!
   const { posts } = props;
-
+  console.log("posts", posts)
   return (
     <div className='posts-container-wrapper'>
       {posts.map((post) => {
