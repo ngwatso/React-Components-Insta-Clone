@@ -31,8 +31,8 @@ const App = () => {
         - otherwise just return the post object unchanged.
      */
     const arr = posts;
-    setPosts(posts.map((id) => {
-      return id === postId ? {...arr} : null;
+    setPosts(posts.map((post) => {
+      return post.id === postId ? console.log("idFound") : {...arr};
     }))
   };  
 

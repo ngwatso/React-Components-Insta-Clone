@@ -10,6 +10,19 @@ const LikeSection = props => {
   // 🔥 Make sure the parent of LikeSection is passing the right props!
   const { likePost, numberOfLikes } = props;
 
+
+  const increaseLikes = () => {
+    return likePost ? console.log('click') : null;
+  }
+  // let increaseNumberOfLikes = numberOfLikes;
+  // const increaseLikes = () => {
+  //   return likePost ? numberOfLikes + 1 : null;
+  // }
+  // console.log("going up", increaseNumberOfLikes)
+  // console.log(likePost)
+  // console.log(numberOfLikes)
+  // console.log(increaseLikes())
+
   return (
     <div>
       <div
@@ -17,7 +30,7 @@ const LikeSection = props => {
         key='likes-icons-container'
       >
         <div className='like-section-wrapper'>
-          <FontAwesomeIcon icon={faHeart} />
+          <FontAwesomeIcon icon={faHeart} onClick={increaseLikes}/>
         </div>
         <div className='like-section-wrapper'>
           <FontAwesomeIcon icon={faComment} />
