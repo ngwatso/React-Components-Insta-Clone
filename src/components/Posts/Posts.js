@@ -17,4 +17,3 @@ const Posts = (props) => {
 };
 
 export default Posts;
-/* Map through the posts array returning a Post component at each iteration */
