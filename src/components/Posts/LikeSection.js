@@ -13,19 +13,9 @@ const LikeSection = props => {
   const [newLike, setNewLike] = useState(numberOfLikes);
 
 
-  const increaseLikes = () => {
-    
+  const increaseLikes = () => {    
     return likePost ? setNewLike(newLike + 1) : null;
-    // return likePost;
   }
-  // let increaseNumberOfLikes = numberOfLikes;
-  // const increaseLikes = () => {
-  //   return likePost ? numberOfLikes + 1 : null;
-  // }
-  // console.log("going up", increaseNumberOfLikes)
-  // console.log(likePost)
-  // console.log(numberOfLikes)
-  console.log("likeSection", newLike, numberOfLikes)
 
   return (
     <div>
